@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidad Jesus Pari Lujan Carrion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #ecc94b;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">JPLC</div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">Jesus Pari Lujan Carrion</h1>
+                        <p class="text-sm text-gray-600">Universidad de Excelencia</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-blue-900 font-medium hover:text-blue-700">Inicio</a>
+                    <a href="#nosotros" class="text-gray-700 hover:text-blue-900">Nosotros</a>
+                    <a href="#programas" class="text-gray-700 hover:text-blue-900">Programas</a>
+                    <a href="#admision" class="text-gray-700 hover:text-blue-900">Admisión</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-blue-900">Contacto</a>
+                </nav>
+                
+                <button class="md:hidden focus:outline-none" id="menu-btn">
+                    <i class="fas fa-bars text-gray-700 text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden mt-4" id="mobile-menu">
+                <a href="#inicio" class="block py-2 text-blue-900 font-medium">Inicio</a>
+                <a href="#nosotros" class="block py-2 text-gray-700">Nosotros</a>
+                <a href="#programas" class="block py-2 text-gray-700">Programas</a>
+                <a href="#admision" class="block py-2 text-gray-700">Admisión</a>
+                <a href="#contacto" class="block py-2 text-gray-700">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-white" id="inicio">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Transformando Vidas a través de la Educación</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">En la Universidad Jesus Pari Lujan Carrion, formamos líderes con valores, conocimientos y habilidades para el mundo actual.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#admision" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Aplica Ahora</a>
+                <a href="#programas" class="bg-transparent hover:bg-blue-900 text-white font-semibold hover:text-white py-3 px-8 border border-white hover:border-transparent rounded-full transition duration-300 transform hover:scale-105">Explora Programas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl font-bold mb-2">25+</div>
+                    <div class="text-xl">Años de Experiencia</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold mb-2">50+</div>
+                    <div class="text-xl">Programas Académicos</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold mb-2">10,000+</div>
+                    <div class="text-xl">Egresados</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold mb-2">95%</div>
+                    <div class="text-xl">Tasa de Empleabilidad</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-white" id="nosotros">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                         alt="Estudiantes universitarios" 
+                         class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-6">Nuestra Universidad</h2>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Fundada en 1998, la Universidad Jesus Pari Lujan Carrion se ha consolidado como una institución líder en educación superior, 
+                        comprometida con la excelencia académica, la investigación innovadora y el desarrollo integral de nuestros estudiantes.
+                    </p>
+                    <p class="text-gray-700 mb-8 leading-relaxed">
+                        Nuestro modelo educativo combina teoría y práctica, preparando profesionales capaces de enfrentar los desafíos del siglo XXI 
+                        con ética, creatividad y pensamiento crítico.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="flex items-center justify-center h-8 w-8 rounded-full bg-blue-100 text-blue-900">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-gray-700 font-medium">Profesores con amplia experiencia académica y profesional</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="flex items-center justify-center h-8 w-8 rounded-full bg-blue-100 text-blue-900">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-gray-700 font-medium">Infraestructura moderna y equipamiento de última generación</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="flex items-center justify-center h-8 w-8 rounded-full bg-blue-100 text-blue-900">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-gray-700 font-medium">Programas académicos reconocidos internacionalmente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="py-20 bg-gray-50" id="programas">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Nuestros Programas Académicos</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ofrecemos una amplia gama de programas diseñados para prepararte para el éxito en un mundo globalizado.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Ingenierías -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-blue-800 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Ingeniería</h3>
+                        <p class="text-gray-600 mb-4">Formación general en ingeniería con enfoque práctico.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 5 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-green-700 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Ingeniería de Llenado de Techo de Calamina</h3>
+                        <p class="text-gray-600 mb-4">Especialización en construcción con calamina.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 4 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-purple-700 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-dice"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Ingeniería de Apuestas</h3>
+                        <p class="text-gray-600 mb-4">Gestión profesional de sistemas de apuestas.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 4 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-red-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Soldadura de Madera</h3>
+                        <p class="text-gray-600 mb-4">Técnicas avanzadas de unión de materiales maderables.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-yellow-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-glass-whiskey"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Ingeniería en Armado de Vasitos</h3>
+                        <p class="text-gray-600 mb-4">Diseño y producción de recipientes desechables.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-pink-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Mecánico de Transformers</h3>
+                        <p class="text-gray-600 mb-4">Mantenimiento de vehículos transformables.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 4 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-indigo-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Piloto de Carrito Anticuchero</h3>
+                        <p class="text-gray-600 mb-4">Operación de unidades móviles de comida.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 2 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-teal-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Piloto de Mototaxi</h3>
+                        <p class="text-gray-600 mb-4">Transporte urbano en motocicletas adaptadas.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 1 año</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-orange-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Piloto de Combi</h3>
+                        <p class="text-gray-600 mb-4">Manejo profesional de transporte colectivo.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 1 año</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-blue-800 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Ingeniería en Mantenimiento de Tubos</h3>
+                        <p class="text-gray-600 mb-4">Reparación y conservación de sistemas tubulares.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-green-700 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-car-crash"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Mecánico de Carritos Chocones</h3>
+                        <p class="text-gray-600 mb-4">Mantenimiento de vehículos de diversión.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 2 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-purple-700 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-swimming-pool"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Diseñador de Waters</h3>
+                        <p class="text-gray-600 mb-4">Creación de espacios acuáticos recreativos.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ciencias de la Salud -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-red-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Nutricionista de Perros Robóticos</h3>
+                        <p class="text-gray-600 mb-4">Alimentación para mascotas electrónicas.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-yellow-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Técnico en Vacuna 5G</h3>
+                        <p class="text-gray-600 mb-4">Aplicación de tecnología avanzada en salud.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 2 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-pink-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Farmacia de Recarga de Saldo</h3>
+                        <p class="text-gray-600 mb-4">Distribución de medicamentos prepago.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-indigo-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Medicina Astral</h3>
+                        <p class="text-gray-600 mb-4">Terapias basadas en alineación cósmica.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 4 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-teal-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Obstetricia de Kinesiologas</h3>
+                        <p class="text-gray-600 mb-4">Atención especializada en partos de terapeutas.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 4 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-orange-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Obstetricia de Abortos</h3>
+                        <p class="text-gray-600 mb-4">Atención especializada en interrupciones.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 4 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-blue-800 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Dentista de Gallos Atómicos</h3>
+                        <p class="text-gray-600 mb-4">Odontología para aves radiactivas.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-green-700 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Investigador Kakologo</h3>
+                        <p class="text-gray-600 mb-4">Estudio científico de materias fecales.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 5 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-purple-700 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-llama"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Inseminación de Llamas</h3>
+                        <p class="text-gray-600 mb-4">Reproducción asistida de camélidos.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-red-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Odontólogo del Ratón Pérez</h3>
+                        <p class="text-gray-600 mb-4">Especialista en dentición infantil mágica.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 4 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-yellow-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Inseminación Profesional de Cuys</h3>
+                        <p class="text-gray-600 mb-4">Reproducción de roedores andinos.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-pink-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-baby-carriage"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Crianza de Leche Ajena</h3>
+                        <p class="text-gray-600 mb-4">Gestión de lactancia materna externa.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 2 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-indigo-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">KCHA Burras</h3>
+                        <p class="text-gray-600 mb-4">Manejo de equinos femeninos.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 2 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Negocios -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-teal-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Administración de Chongos</h3>
+                        <p class="text-gray-600 mb-4">Gestión de establecimientos informales.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-orange-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-toilet"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Administración de Baños Públicos</h3>
+                        <p class="text-gray-600 mb-4">Gestión de servicios sanitarios comunitarios.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-blue-800 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-dog"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Administración de Peleas Callejeras de Perros</h3>
+                        <p class="text-gray-600 mb-4">Organización de eventos caninos.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 2 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-green-700 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Analista de Créditos Gota a Gota</h3>
+                        <p class="text-gray-600 mb-4">Evaluación de microcréditos informales.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-purple-700 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Administración de Telos</h3>
+                        <p class="text-gray-600 mb-4">Gestión de alojamientos por horas.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-red-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-cannabis"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Catador de Gampis</h3>
+                        <p class="text-gray-600 mb-4">Evaluación sensorial de productos herbales.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 2 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-yellow-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Caficho de Onlyfans</h3>
+                        <p class="text-gray-600 mb-4">Gestión de contenido para plataformas digitales.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 2 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-pink-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Amasador de Chinos</h3>
+                        <p class="text-gray-600 mb-4">Técnicas de manipulación de masas.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 1 año</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-indigo-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Streamer Fracasado</h3>
+                        <p class="text-gray-600 mb-4">Gestión de transmisiones con baja audiencia.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 1 año</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-teal-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Pelador de Pollo Profesional</h3>
+                        <p class="text-gray-600 mb-4">Técnicas avanzadas de despiece avícola.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 1 año</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-orange-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-cow"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Traductor de Vacas Cachadas</h3>
+                        <p class="text-gray-600 mb-4">Interpretación de comportamiento bovino.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 2 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-blue-800 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Cobrador de Avión Profesional</h3>
+                        <p class="text-gray-600 mb-4">Gestión de pagos aéreos.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 1 año</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-green-700 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-bread-slice"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Administración de Carretillas de Desayuno</h3>
+                        <p class="text-gray-600 mb-4">Gestión de unidades móviles alimenticias.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 2 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-purple-700 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Administración de Grupos de Whatsapp</h3>
+                        <p class="text-gray-600 mb-4">Gestión de comunidades digitales.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 1 año</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-red-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Minero de Criptomonedas</h3>
+                        <p class="text-gray-600 mb-4">Extracción de divisas digitales.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 2 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-yellow-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-male"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Kchador de Mosos Profesional</h3>
+                        <p class="text-gray-600 mb-4">Gestión de personal masculino.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 1 año</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-pink-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-chair"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Asador de Asientos Públicos & Privados</h3>
+                        <p class="text-gray-600 mb-4">Tratamiento térmico de mobiliario.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 1 año</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-indigo-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Administrador de Ventas de Marcianos</h3>
+                        <p class="text-gray-600 mb-4">Comercio interplanetario.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-teal-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Administrador de Discord</h3>
+                        <p class="text-gray-600 mb-4">Gestión de servidores digitales.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 1 año</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-orange-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Corredor Inmobiliario y Venta de Terrenos en Marte</h3>
+                        <p class="text-gray-600 mb-4">Comercialización de propiedades extraterrestres.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ciencias Humanas -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-blue-800 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-gun"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Licenciado en Asalto con Mano Armada</h3>
+                        <p class="text-gray-600 mb-4">Técnicas avanzadas de apropiación indebida.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-green-700 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Licenciado en Estivación de Mercado</h3>
+                        <p class="text-gray-600 mb-4">Organización de espacios comerciales.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-purple-700 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Asesoría Legal de Turrones</h3>
+                        <p class="text-gray-600 mb-4">Normativa aplicable a dulces navideños.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-red-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Asalto en Mototaxi</h3>
+                        <p class="text-gray-600 mb-4">Técnicas de apropiación vehicular.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 2 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-yellow-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Ciencias del Abandono</h3>
+                        <p class="text-gray-600 mb-4">Estudio de procesos de desamparo.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 4 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-pink-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Derecho del Dibujito</h3>
+                        <p class="text-gray-600 mb-4">Legislación aplicable a personajes animados.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 4 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-indigo-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Comunicador de Fake News</h3>
+                        <p class="text-gray-600 mb-4">Difusión de información no verificada.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-teal-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Analista de Clonazepam</h3>
+                        <p class="text-gray-600 mb-4">Estudio de efectos psicotrópicos.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-orange-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Escritor de Watpad</h3>
+                        <p class="text-gray-600 mb-4">Creación literaria para plataformas digitales.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-blue-800 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-megaphone"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Creador de Funas Profesional</h3>
+                        <p class="text-gray-600 mb-4">Exposición pública de conductas indebidas.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 2 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-green-700 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Escritor de Mangas Hentai</h3>
+                        <p class="text-gray-600 mb-4">Creación de historietas japonesas adultas.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 3 años</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-purple-700 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Soldado de Batallas de TikTok</h3>
+                        <p class="text-gray-600 mb-4">Participación en conflictos digitales.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 1 año</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-red-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Parador de Retos de TikTok</h3>
+                        <p class="text-gray-600 mb-4">Ejecución de desafíos virales.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 1 año</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="h-48 bg-yellow-600 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Inspector de Glúteos de TikTok</h3>
+                        <p class="text-gray-600 mb-4">Evaluación de contenido corporal.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-900">Duración: 1 año</span>
+                            <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">Más información →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                    Ver todos los programas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gray-50" id="contacto">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Contáctanos</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Estamos aquí para responder tus preguntas y guiarte en tu proceso de admisión.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="bg-white rounded-lg shadow-md p-8 h-full">
+                        <h3 class="text-xl font-bold text-blue-900 mb-6">Información de contacto</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 text-blue-900 mt-1">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">Dirección</h4>
+                                    <p class="text-gray-600">Av. Universitaria 1234, Lima, Perú</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 text-blue-900 mt-1">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">Teléfono</h4>
+                                    <p class="text-gray-600">+56 9 6702 8321</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 text-blue-900 mt-1">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">Email</h4>
+                                    <p class="text-gray-600">admision@jplc.edu.pe</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 text-blue-900 mt-1">
+                                    <i class="fas fa-clock text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">Horario de atención</h4>
+                                    <p class="text-gray-600">Lunes a Viernes: 8:00 am - 6:00 pm<br>Sábados: 9:00 am - 1:00 pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="text-lg font-medium text-gray-900 mb-4">Síguenos en redes sociales</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center hover:bg-blue-200 transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center hover:bg-blue-200 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center hover:bg-blue-200 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center hover:bg-blue-200 transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center hover:bg-blue-200 transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-10">
+                    <div class="bg-white rounded-lg shadow-md p-8 h-full">
+                        <h3 class="text-xl font-bold text-blue-900 mb-6">Envíanos un mensaje</h3>
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nombre completo</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Correo electrónico</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Teléfono</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="program" class="block text-gray-700 font-medium mb-2">Programa de interés</label>
+                                <select id="program" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option value="">Selecciona un programa</option>
+                                    <option value="techo">Ingeniería de Llenado de Techo de Calamina</option>
+                                    <option value="apuestas">Ingeniería de Apuestas</option>
+                                    <option value="madera">Soldadura de Madera</option>
+                                    <option value="vasitos">Ingeniería en Armado de Vasitos</option>
+                                    <option value="transformers">Mecánico de Transformers</option>
+                                    <option value="anticuchero">Piloto de Carrito Anticuchero</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300 transform hover:scale-105">
+                                Enviar mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">JPLC</div>
+                        <div>
+                            <h3 class="text-xl font-bold">Jesus Pari Lujan Carrion</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">Universidad comprometida con la excelencia académica, la investigación y la formación integral de profesionales líderes.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Enlaces rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Biblioteca virtual</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Campus virtual</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">
